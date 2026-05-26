@@ -31,6 +31,8 @@ knowledge-base/evidence/ocr-notes/page-previews/
 # Optional OCR scratch outputs
 knowledge-base/evidence/ocr-notes/tmp/
 knowledge-base/evidence/ocr-notes/cache/
+knowledge-base/evidence/ocr-notes/fulltext/
+knowledge-base/normalized/chapter-texts/
 
 # Generated archives
 *.zip

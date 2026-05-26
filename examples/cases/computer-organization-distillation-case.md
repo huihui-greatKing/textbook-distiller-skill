@@ -2,7 +2,7 @@
 
 ## 案例定位
 
-本案例用于说明 `textbook-distiller` 如何在真实课程资料中分阶段使用。它记录的是项目流程、文件组织和阶段产物，不作为教材章节内容总结，也不替代后续逐章蒸馏。
+本案例用于说明 `textbook-distiller` 如何在真实课程资料中使用。它既可以作为阶段确认模式的样例，也可以作为全流程授权模式的验证样例：先保留资料登记、可读性检查和页码映射，再继续执行整本 OCR、章节文本切分、章节总结和章节 Skill 生成。
 
 ## 适用目的
 
@@ -20,6 +20,8 @@
 | 页码映射 | `knowledge-base/evidence/ocr-notes/page-map-notes.md` | 记录教材页码与 PDF 物理页序的对应关系 |
 | 目录结构 | `BOOK_STRUCTURE.md` | 记录章、页码范围、分册文件对应关系和待复核点 |
 | 蒸馏计划 | `knowledge-base/normalized/chapter-distillation-plan.md` | 为后续逐章生成章节 Skill 提供计划 |
+| 整本 OCR | `knowledge-base/evidence/ocr-notes/fulltext/` | 保存逐页 OCR 文本、JSONL 证据和 OCR 摘要 |
+| 章节文本包 | `knowledge-base/normalized/chapter-texts/` | 按 `BOOK_STRUCTURE.md` 将 OCR 文本切分到各章 |
 
 ## 复用到其他教材时的步骤
 
@@ -28,8 +30,9 @@
 3. 先执行资料登记，生成 `knowledge-base/raw/source-files.md`；
 4. 再执行 PDF 可读性检查，生成 `knowledge-base/evidence/ocr-notes/pdf-readability-check.md`；
 5. 如果是扫描版，先建立页码映射和 OCR 计划；
-6. 目录和页码确认后，再进入单章蒸馏；
-7. 每章 Skill 完成后，用测试提示词检查调用条件、解题步骤和待复核项。
+6. 目录和页码确认后，如果用户授权，可以连续执行整本 OCR 和章节文本切分；
+7. 基于章节文本包生成章节总结和章节 Skill；
+8. 每章 Skill 完成后，用测试提示词检查调用条件、解题步骤和待复核项。
 
 ## 维护建议
 
@@ -40,7 +43,7 @@
 
 ## 后续可继续补充
 
-- 单章 OCR 试运行记录；
+- 整本 OCR 运行记录；
 - 章节 Skill 生成样例；
 - 测试题与评价标准样例；
 - 课程报告生成样例。

@@ -44,7 +44,17 @@ D:\西电\作业\计组\课本蒸馏\教材
 
 ## 4. 当前处理范围
 
-当前只完成教材资料登记和可读性检查，不直接蒸馏教材正文，不生成章节 Skill，不生成完整测试题。
+当前项目已进入全量蒸馏验证：在完成教材资料登记和可读性检查后，已对完整教材 PDF 运行 OCR，并按章节生成章节总结、章节 Skill、综合作业 Skill、测试与评价文件。OCR 不确定内容继续保留为待人工复核项。
 
-后续建议先用完整本 PDF 识别目录，再用分段 PDF 逐章处理。第 6 章和第 7 章相关文件存在页数异常，应优先复核。
+第 6 章和第 7 章相关文件存在页数异常，已经在 `BOOK_STRUCTURE.md` 中标注：第 6 章文件实际包含第 6 章和第 7 章，第 7 章另有独立分段文件。
 
+## 5. 已生成成果
+
+- 整本 OCR 运行记录：`knowledge-base/evidence/ocr-notes/ocr-run-log.md`
+- 章节 OCR 文本包：`knowledge-base/normalized/chapter-texts/`
+- 章节总结：`knowledge-base/normalized/chapter-summaries/`
+- 第 1 章到第 10 章章节 Skill：`skills/chapter-*/SKILL.md`
+- 综合作业 Skill：`skills/comprehensive-homework/SKILL.md`
+- 测试提示词：`tests/test-prompts.md`
+- 评价标准：`tests/evaluation.md`
+- 课程报告：`DISTILLATION_REPORT.md`

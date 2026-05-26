@@ -34,7 +34,7 @@
 
 ## 当前阶段说明
 
-当前阶段只完成“项目架构设计”和“教材蒸馏器 Skill”的创建，暂不直接蒸馏教材内容，不总结具体章节，也不运行整本教材的 OCR。
+项目已经完成“项目架构设计”和“教材蒸馏器 Skill”的创建。当前版本的 `textbook-distiller` 支持两种使用方式：一种是按阶段确认后逐步推进，另一种是在用户明确授权后连续执行整本教材 OCR、章节总结、章节 Skill 生成、测试与课程报告整理。
 
 本阶段输出的核心内容是：
 
@@ -42,7 +42,9 @@
 - 项目说明文档；
 - 后续协作约束；
 - 五阶段执行计划；
-- `skills/textbook-distiller/SKILL.md` 元 Skill。
+- `skills/textbook-distiller/SKILL.md` 元 Skill；
+- `skills/textbook-distiller/scripts/ocr_textbook.py` 整本 OCR 脚本；
+- `skills/textbook-distiller/scripts/build_chapter_texts.py` 章节 OCR 文本切分脚本。
 
 ## 目录说明
 
@@ -72,9 +74,15 @@ computer-organization-book2skill/
 
 ## 后续使用方式
 
-后续处理教材时，应先把教材 PDF 或相关资料放入 `knowledge-base/raw/`，再调用 `textbook-distiller` Skill 进行资料读取、目录识别、逐章蒸馏和测试验证。
+后续处理教材时，应先把教材 PDF 或相关资料放入 `knowledge-base/raw/`，再调用 `textbook-distiller` Skill 进行资料读取、目录识别、OCR、逐章蒸馏和测试验证。
 
 如果教材是扫描版，应先进行 OCR 或页面图像识别，并把识别不清楚的标题、公式、图表、表格和页码写入待人工复核列表，不能把不确定内容直接写成确定结论。
+
+如果已经确认要直接处理整本教材，可以使用类似指令：
+
+```text
+请使用 textbook-distiller 对这本教材进入全流程授权模式：完成资料登记、整本 OCR、章节文本切分、逐章总结、章节 Skill、测试评价和课程报告；中间结果落盘，严重阻塞时再停止说明。
+```
 
 ## Python 环境与 Skill 校验
 
