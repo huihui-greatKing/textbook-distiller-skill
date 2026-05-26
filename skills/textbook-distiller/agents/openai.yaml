@@ -1,0 +1,4 @@
+interface:
+  display_name: "Textbook Distiller"
+  short_description: "Distill textbooks into reusable AI skills"
+  default_prompt: "Use $textbook-distiller to plan a staged textbook distillation workflow and stop after the requested stage."

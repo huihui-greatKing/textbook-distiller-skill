@@ -1,0 +1,38 @@
+# Local runtime and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tmp
+*.bak
+*.log
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Node caches, if OCR or tooling scripts use Node later
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Source textbook files should stay outside the skill repo
+*.pdf
+
+# Generated page images and visual previews are reproducible and can be large
+knowledge-base/evidence/ocr-notes/page-images/
+knowledge-base/evidence/ocr-notes/page-previews/
+
+# Optional OCR scratch outputs
+knowledge-base/evidence/ocr-notes/tmp/
+knowledge-base/evidence/ocr-notes/cache/
+
+# Generated archives
+*.zip
+*.7z
+*.rar
