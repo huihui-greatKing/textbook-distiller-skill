@@ -48,3 +48,12 @@
 - 修改的文件：`skills/textbook-distiller/SKILL.md`、`AGENTS.md`、`README.md`、`INDEX.md`、`skills/textbook-distiller/scripts/enhance_practical_distillation.py`、`knowledge-base/normalized/study-guide.md`、`knowledge-base/normalized/concepts/`、`knowledge-base/normalized/problem-types/`、`knowledge-base/normalized/chapter-summaries/`、`skills/chapter-*/SKILL.md`。
 - 验证结果：已生成整本复习总览、每章知识点提炼、每章题型与作业方法，并重写第 1 章到第 10 章章节 Skill，使其包含概念解释、常见题型、解题步骤和作业书写方式。
 - 下一轮：后续可在人工复核公式、图表和例题后继续补强精确计算题与图表题。
+
+## 第 7 轮：学习型深度蒸馏升级
+
+- 发现的问题：章节 Skill 虽然比模板更实用，但仍偏向章节概要和方法清单，缺少概念精讲、知识地图、图表说明、示例题、参考答案和完整作业式答案流程。
+- 第 1 轮修正：新增 `skills/textbook-distiller/scripts/upgrade_learning_distillation.py`，重写第 1 章到第 10 章章节 Skill，使每章包含学习目标、知识地图、核心概念精讲、公式规则、教材图表整理、典型题型、作业辅助模板、复习提纲、自测题与参考答案。
+- 第 2 轮修正：强化 `skills/comprehensive-homework/SKILL.md`，要求输出题目分析、所属章节与知识点、解题思路、详细过程、最终答案、易错点和检查方法，并分别提供简答题、计算题、比较题格式。
+- 第 3 轮修正：更新 `tests/test-prompts.md`、`tests/evaluation.md` 和 `DISTILLATION_REPORT.md`，测试覆盖学习理解、复习提纲、作业解题和易错辨析，报告说明目标从概要总结调整为“学习理解 + 复习整理 + 题型训练 + 作业书写辅助”。
+- 验证结果：章节 Skill 已具备学习型结构；综合作业 Skill 已具备完整作业式答案输出格式；测试和评价标准不再只检查是否调用 Skill，而是检查是否能真正帮助学习、复习和做作业。
+- 下一轮：继续人工复核扫描版教材中的公式、图表、例题题干和 OCR 低置信度内容。

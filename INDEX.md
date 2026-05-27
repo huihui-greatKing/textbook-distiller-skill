@@ -21,6 +21,7 @@
 - 章节文本切分脚本：`skills/textbook-distiller/scripts/build_chapter_texts.py`
 - 蒸馏生成脚本：`skills/textbook-distiller/scripts/generate_distillation_from_ocr.py`
 - 复习导向二次蒸馏脚本：`skills/textbook-distiller/scripts/enhance_practical_distillation.py`
+- 学习型深度蒸馏脚本：`skills/textbook-distiller/scripts/upgrade_learning_distillation.py`
 
 ## 教材处理结果
 

@@ -72,6 +72,8 @@ computer-organization-book2skill/
 
 因此，判断一次教材蒸馏是否有用，不能只看是否生成了目录、模板和检查表，还要看是否产出了能直接帮助复习和作业的内容，例如章节主线、核心概念解释、常见题型、解题步骤、作业表达方式和易错点。
 
+当前版本进一步把教材蒸馏目标调整为“学习理解 + 复习整理 + 题型训练 + 作业书写辅助”。章节 Skill 不应只是本章概要，而应能讲透概念、整理公式和图表、归纳典型题型、给出作业式解题过程，并提供自测题和参考答案。
+
 - `skills/textbook-distiller/SKILL.md`：核心流程、边界和阶段规则；
 - `skills/textbook-distiller/references/methodology.md`：证据追踪、候选筛选、跨章关联等方法论；
 - `skills/textbook-distiller/references/templates.md`：输入检查表、输出格式和章节 Skill 完整模板；
