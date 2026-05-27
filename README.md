@@ -36,7 +36,7 @@
 
 项目已经完成对《计算机组成与设计》教材的全量蒸馏验证。当前成果重点是教材处理后的课程实践材料，包括章节结构、OCR 记录、章节总结、章节 Skill、综合作业 Skill、测试评价文件和课程报告。
 
-当前项目交付内容：
+使用 `textbook-distiller` 处理教材时，交付重点是“教材跑出来的结果”，也就是下面这些课程实践成果：
 
 - `BOOK_STRUCTURE.md` 教材章节结构和页码映射；
 - `knowledge-base/evidence/ocr-notes/ocr-run-log.md` OCR 运行记录；
@@ -65,7 +65,7 @@ computer-organization-book2skill/
 
 其中 `skills/chapter-xx-xxx/` 是本教材蒸馏后生成的章节 Skill；`tests/` 用于保存测试题和评价标准；`examples/` 用于保存运行提示词和作业书写模板。
 
-`skills/textbook-distiller/` 是项目内部用于规范蒸馏流程的实现材料，不作为本课程项目的主要交付成果。它的作用是保证 OCR、章节整理、Skill 生成和测试评价过程有统一规则。
+`skills/textbook-distiller/` 也保存在本仓库中，它是用于生成上述成果的教材蒸馏 Skill。它可以继续维护和复用，但在使用它处理某一本教材时，最终交付应以教材蒸馏结果为主，而不是只交付这个元 Skill 本身。
 
 - `skills/textbook-distiller/SKILL.md`：核心流程、边界和阶段规则；
 - `skills/textbook-distiller/references/methodology.md`：证据追踪、候选筛选、跨章关联等方法论；
