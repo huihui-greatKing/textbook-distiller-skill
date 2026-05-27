@@ -34,3 +34,10 @@
 - 修改的文件：`ocr-run-log.md`、`figure-review-notes.md`、`formula-table-review-notes.md`、`.agents/skills/textbook-distiller/SKILL.md`。
 - 验证结果：项目具备规划模式和全量蒸馏模式；章节 Skill、综合 Skill、测试、评价和报告均已生成。
 - 下一轮：不继续循环，进入提交与推送。
+
+## 补充复查：项目要求对齐
+
+- 发现的问题：部分说明文件仍保留本机教材绝对路径；`textbook-distiller` 未在主说明中列出蒸馏生成脚本；少量示例和知识库文件仍是早期占位。
+- 修改的文件：`BOOK_OVERVIEW.md`、`BOOK_STRUCTURE.md`、`page-map-notes.md`、`source-files.md`、`examples/homework-writing-template.md`、`examples/solved-examples.md`、`cross-links.md`、`glossary.md`、`skills/textbook-distiller/SKILL.md`。
+- 验证结果：`textbook-distiller` 与 `.agents` 副本均通过 Codex Skill 校验；第 1 章到第 10 章章节 Skill 均包含要求的结构；未再发现个人绝对路径或旧阶段占位表达。
+- 下一轮：后续主要应人工复核 OCR 低置信度内容、公式、表格、图示和例题题干。

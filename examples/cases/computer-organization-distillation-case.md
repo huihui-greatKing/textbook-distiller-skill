@@ -19,7 +19,7 @@
 | 可读性检查 | `knowledge-base/evidence/ocr-notes/pdf-readability-check.md` | 判断 PDF 是否可直接抽取文字，并记录检查结论 |
 | 页码映射 | `knowledge-base/evidence/ocr-notes/page-map-notes.md` | 记录教材页码与 PDF 物理页序的对应关系 |
 | 目录结构 | `BOOK_STRUCTURE.md` | 记录章、页码范围、分册文件对应关系和待复核点 |
-| 蒸馏计划 | `knowledge-base/normalized/chapter-distillation-plan.md` | 为后续逐章生成章节 Skill 提供计划 |
+| 蒸馏计划 | `knowledge-base/normalized/chapter-distillation-plan.md` | 记录逐章蒸馏顺序和复核重点 |
 | 整本 OCR | `knowledge-base/evidence/ocr-notes/fulltext/` | 保存逐页 OCR 文本、JSONL 证据和 OCR 摘要 |
 | 章节文本包 | `knowledge-base/normalized/chapter-texts/` | 按 `BOOK_STRUCTURE.md` 将 OCR 文本切分到各章 |
 
