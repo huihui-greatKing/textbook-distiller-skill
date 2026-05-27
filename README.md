@@ -40,7 +40,10 @@
 
 - `BOOK_STRUCTURE.md` 教材章节结构和页码映射；
 - `knowledge-base/evidence/ocr-notes/ocr-run-log.md` OCR 运行记录；
-- `knowledge-base/normalized/chapter-summaries/` 第 1 章到第 10 章章节总结；
+- `knowledge-base/normalized/study-guide.md` 面向复习和作业的整本教材蒸馏总览；
+- `knowledge-base/normalized/concepts/` 第 1 章到第 10 章知识点提炼；
+- `knowledge-base/normalized/problem-types/` 第 1 章到第 10 章题型与作业方法；
+- `knowledge-base/normalized/chapter-summaries/` 第 1 章到第 10 章复习式章节总结；
 - `skills/chapter-*/SKILL.md` 第 1 章到第 10 章章节 Skill；
 - `skills/comprehensive-homework/SKILL.md` 综合作业 Skill；
 - `tests/test-prompts.md` 和 `tests/evaluation.md` 测试与评价文件；
@@ -66,6 +69,8 @@ computer-organization-book2skill/
 其中 `skills/chapter-xx-xxx/` 是本教材蒸馏后生成的章节 Skill；`tests/` 用于保存测试题和评价标准；`examples/` 用于保存运行提示词和作业书写模板。
 
 `skills/textbook-distiller/` 也保存在本仓库中，它是用于生成上述成果的教材蒸馏 Skill。它可以继续维护和复用，但在使用它处理某一本教材时，最终交付应以教材蒸馏结果为主，而不是只交付这个元 Skill 本身。
+
+因此，判断一次教材蒸馏是否有用，不能只看是否生成了目录、模板和检查表，还要看是否产出了能直接帮助复习和作业的内容，例如章节主线、核心概念解释、常见题型、解题步骤、作业表达方式和易错点。
 
 - `skills/textbook-distiller/SKILL.md`：核心流程、边界和阶段规则；
 - `skills/textbook-distiller/references/methodology.md`：证据追踪、候选筛选、跨章关联等方法论；

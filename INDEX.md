@@ -20,6 +20,7 @@
 - OCR 脚本：`skills/textbook-distiller/scripts/ocr_textbook.py`
 - 章节文本切分脚本：`skills/textbook-distiller/scripts/build_chapter_texts.py`
 - 蒸馏生成脚本：`skills/textbook-distiller/scripts/generate_distillation_from_ocr.py`
+- 复习导向二次蒸馏脚本：`skills/textbook-distiller/scripts/enhance_practical_distillation.py`
 
 ## 教材处理结果
 
@@ -27,7 +28,10 @@
 - OCR 日志：`knowledge-base/evidence/ocr-notes/ocr-run-log.md`
 - 图表复核：`knowledge-base/evidence/figure-notes/figure-review-notes.md`
 - 公式表格复核：`knowledge-base/evidence/formula-table-notes/formula-table-review-notes.md`
-- 章节总结：`knowledge-base/normalized/chapter-summaries/`
+- 整本复习总览：`knowledge-base/normalized/study-guide.md`
+- 知识点提炼：`knowledge-base/normalized/concepts/`
+- 题型与作业方法：`knowledge-base/normalized/problem-types/`
+- 复习式章节总结：`knowledge-base/normalized/chapter-summaries/`
 
 ## 章节 Skill
 

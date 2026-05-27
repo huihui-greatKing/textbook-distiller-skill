@@ -41,3 +41,10 @@
 - 修改的文件：`BOOK_OVERVIEW.md`、`BOOK_STRUCTURE.md`、`page-map-notes.md`、`source-files.md`、`examples/homework-writing-template.md`、`examples/solved-examples.md`、`cross-links.md`、`glossary.md`、`skills/textbook-distiller/SKILL.md`。
 - 验证结果：`textbook-distiller` 与 `.agents` 副本均通过 Codex Skill 校验；第 1 章到第 10 章章节 Skill 均包含要求的结构；未再发现个人绝对路径或旧阶段占位表达。
 - 下一轮：后续主要应人工复核 OCR 低置信度内容、公式、表格、图示和例题题干。
+
+## 第 6 轮：复习与作业导向修正
+
+- 发现的问题：前一版结果偏向模板、清单和结构说明，对实际复习、知识点归纳和作业解题帮助不够。
+- 修改的文件：`skills/textbook-distiller/SKILL.md`、`AGENTS.md`、`README.md`、`INDEX.md`、`skills/textbook-distiller/scripts/enhance_practical_distillation.py`、`knowledge-base/normalized/study-guide.md`、`knowledge-base/normalized/concepts/`、`knowledge-base/normalized/problem-types/`、`knowledge-base/normalized/chapter-summaries/`、`skills/chapter-*/SKILL.md`。
+- 验证结果：已生成整本复习总览、每章知识点提炼、每章题型与作业方法，并重写第 1 章到第 10 章章节 Skill，使其包含概念解释、常见题型、解题步骤和作业书写方式。
+- 下一轮：后续可在人工复核公式、图表和例题后继续补强精确计算题与图表题。
