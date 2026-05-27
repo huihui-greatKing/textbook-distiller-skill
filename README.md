@@ -32,19 +32,28 @@
 
 具体实现时，先整理教材 PDF、截图、PPT、笔记等资料，判断资料是否可直接读取；再建立教材目录和页码范围；然后按章节抽取概念、公式、图表、题型和易错点；接着把教材中的解题过程整理成可复用的方法；最后生成章节 Skill、综合作业 Skill、测试题和课程报告。
 
-## 当前阶段说明
+## 项目当前成果
 
-项目已经完成“项目架构设计”和“教材蒸馏器 Skill”的创建。当前版本的 `textbook-distiller` 支持两种使用方式：一种是按阶段确认后逐步推进，另一种是在用户明确授权后连续执行整本教材 OCR、章节总结、章节 Skill 生成、测试与课程报告整理。
+项目已经完成可复用教材蒸馏 Skill 的设计，并使用该 Skill 对《计算机组成与设计》教材进行了全量蒸馏验证。当前版本的 `textbook-distiller` 支持两种使用方式：一种是按阶段确认后逐步推进，另一种是在用户明确授权后连续执行整本教材 OCR、章节总结、章节 Skill 生成、测试与课程报告整理。
 
-本阶段输出的核心内容是：
+当前项目产物包括两类：一类是可复用的教材蒸馏工具，另一类是本教材蒸馏后形成的课程实践成果。
 
-- 项目目录结构；
-- 项目说明文档；
-- 后续协作约束；
-- 五阶段执行计划；
+可复用工具：
+
 - `skills/textbook-distiller/SKILL.md` 元 Skill；
 - `skills/textbook-distiller/scripts/ocr_textbook.py` 整本 OCR 脚本；
-- `skills/textbook-distiller/scripts/build_chapter_texts.py` 章节 OCR 文本切分脚本。
+- `skills/textbook-distiller/scripts/build_chapter_texts.py` 章节 OCR 文本切分脚本；
+- `skills/textbook-distiller/scripts/generate_distillation_from_ocr.py` 蒸馏结果生成脚本。
+
+教材蒸馏成果：
+
+- `BOOK_STRUCTURE.md` 教材章节结构和页码映射；
+- `knowledge-base/evidence/ocr-notes/ocr-run-log.md` OCR 运行记录；
+- `knowledge-base/normalized/chapter-summaries/` 第 1 章到第 10 章章节总结；
+- `skills/chapter-*/SKILL.md` 第 1 章到第 10 章章节 Skill；
+- `skills/comprehensive-homework/SKILL.md` 综合作业 Skill；
+- `tests/test-prompts.md` 和 `tests/evaluation.md` 测试与评价文件；
+- `DISTILLATION_REPORT.md` 课程实践报告。
 
 ## 目录说明
 
@@ -63,7 +72,7 @@ computer-organization-book2skill/
 └── examples/
 ```
 
-其中 `skills/textbook-distiller/` 是当前阶段的核心目录。后续阶段会在 `skills/chapter-xx-xxx/` 中逐章生成章节 Skill，在 `tests/` 中补充测试题和评价标准，在 `examples/` 中补充例题整理和作业书写模板。
+其中 `skills/textbook-distiller/` 是可复用教材蒸馏器 Skill；`skills/chapter-xx-xxx/` 是本教材蒸馏后生成的章节 Skill；`tests/` 用于保存测试题和评价标准；`examples/` 用于保存运行提示词和作业书写模板。
 
 `textbook-distiller` 采用渐进加载结构：
 
@@ -92,34 +101,22 @@ computer-organization-book2skill/
 py -m pip install -r requirements.txt
 ```
 
-校验 `textbook-distiller` 是否符合 Codex Skill 结构时，建议使用 UTF-8 模式：
+校验 `textbook-distiller` 是否符合 Codex Skill 结构时，建议使用 Codex Skill 校验脚本，并在 Windows 下开启 UTF-8 模式：
 
 ```powershell
 $env:PYTHONUTF8='1'
-py "C:\Users\wanghui\.codex\skills\.system\skill-creator\scripts\quick_validate.py" skills\textbook-distiller
+py "<Codex skill-creator quick_validate.py 路径>" skills\textbook-distiller
 ```
 
 如果输出 `Skill is valid!`，说明 Skill 的基础结构有效。
 
 ## 个人 Skill 安装与更新
 
-`textbook-distiller` 已安装为个人 Codex Skill：
-
-```text
-C:\Users\wanghui\.codex\skills\textbook-distiller
-```
-
-安装方式是目录链接，指向本项目中的源目录：
-
-```text
-D:\西电\作业\计组\课本蒸馏\skill\computer-organization-book2skill\skills\textbook-distiller
-```
-
-因此后续要完善这个 Skill 时，直接修改本项目的 `skills/textbook-distiller/` 即可；个人 Skill 会同步看到这些修改。修改后建议重新运行校验：
+`textbook-distiller` 可以安装为个人 Codex Skill，便于以后在不同教材项目中复用。建议保留本项目中的 `skills/textbook-distiller/` 作为源目录，后续需要完善 Skill 时优先修改这个目录，并重新运行校验。
 
 ```powershell
 $env:PYTHONUTF8='1'
-py "C:\Users\wanghui\.codex\skills\.system\skill-creator\scripts\quick_validate.py" "C:\Users\wanghui\.codex\skills\textbook-distiller"
+py "<Codex skill-creator quick_validate.py 路径>" skills\textbook-distiller
 ```
 
 新增或更新 Skill 后，建议重启 Codex 以便重新加载技能列表和元数据。
